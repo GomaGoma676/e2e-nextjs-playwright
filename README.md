@@ -1,27 +1,35 @@
-# Next.js + Tailwind CSS Example
-
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
+## Next.js project setup
+#### Next.js
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
+# create-next-app
+npx create-next-app --example with-tailwindcss nextjs-e2e --use-npm
+npm i next@13.1.0
 ```
-
 ```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+# install package
+npm i next-auth@4.18.6 @prisma/client@4.8.0 @next-auth/prisma-adapter@1.0.5 date-fns@2.29.3 zustand@4.1.5 zod@3.20.2 @heroicons/react@2.0.13
 ```
-
 ```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+# install package
+npm i -D prisma@4.8.0 @playwright/test@1.29.0
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+```bash
+# install playwright
+npx playwright install
+```
+#### Postgres DB
+~~~bash
+# start db
+docker compose up -d
+# remove db
+docker compose rm -s -f -v
+~~~
+#### Prisma
+~~~bash
+# init
+npx prisma init
+# migrate
+npx prisma migrate dev
+# gen types
+npx prisma generate
+~~~

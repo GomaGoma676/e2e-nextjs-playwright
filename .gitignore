@@ -18,6 +18,8 @@
 # misc
 .DS_Store
 *.pem
+playwright-report/*
+.vscode
 
 # debug
 npm-debug.log*
