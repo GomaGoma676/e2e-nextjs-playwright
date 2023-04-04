@@ -2,8 +2,9 @@
 #### Next.js
 ```bash
 # create-next-app
-npx create-next-app --example with-tailwindcss nextjs-e2e --use-npm
-npm i next@13.1.0
+# npx create-next-app --example with-tailwindcss nextjs-e2e --use-npm
+npx create-next-app@canary --tailwind with-tailwindcss-app nextjs-e2e --use-npm
+npm i next@13.2.4
 ```
 ```bash
 # install package
